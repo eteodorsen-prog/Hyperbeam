@@ -10,7 +10,7 @@ namespace Oppgave_3
     {
         private Random random = new Random();
         private int secretNumber;
-        private int MaxAttempts = 2;
+        private int MaxAttempts = 6;
 
 
         public void StartGame()
@@ -38,11 +38,11 @@ namespace Oppgave_3
                             return;
 
                         case < 1:
-                            hint = "for lavt! prøv høyere!";
+                            hint = "høgar din fjått!";
                             break;
 
                         case > 2:
-                            hint = "for høyt! prøv lavere!";
+                            hint = "lågar din fjått!";
                             break;
 
                     }
@@ -64,9 +64,9 @@ namespace Oppgave_3
 
 
                 }
-                Console.WriteLine($" tallet var {secretNumber}, bedre lykke neste gang!");
 
             }
+            Console.WriteLine($" tallet var {secretNumber}, bedre lykke neste gang!");
 
         }
 
