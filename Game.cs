@@ -6,7 +6,7 @@ using Microsoft.Win32.SafeHandles;
 namespace Oppgave_3
 {
 
-   public class Game
+    public class Game
     {
         private Random random = new Random();
         private int secretNumber;
@@ -15,9 +15,9 @@ namespace Oppgave_3
 
         public void StartGame()
         {
-            secretNumber= random.Next (1,50);
+            secretNumber = random.Next(1, 76);
             int attempts = 0;
-            Console.WriteLine($"Jeg tenker på et tall mellom 1-50, kan du gjette det? du har " + MaxAttempts + " forsøk");
+            Console.WriteLine($"Jeg tenker på et tall mellom 1-76, kan du gjette det? du har " + MaxAttempts + " forsøk");
 
             while (attempts < MaxAttempts)
             {
@@ -40,7 +40,7 @@ namespace Oppgave_3
                         case < 1:
                             hint = "for lavt! prøv høyere!";
                             break;
-                        
+
                         case > 2:
                             hint = "for høyt! prøv lavere!";
                             break;
@@ -48,10 +48,10 @@ namespace Oppgave_3
                     }
 
                     if (hint != "")
-                    
+
                     {
                         Console.WriteLine(hint);
-                        Console.WriteLine($"forsøk igjen du har { MaxAttempts - attempts}. forsøk igjen");
+                        Console.WriteLine($"forsøk igjen du har {MaxAttempts - attempts}. forsøk igjen");
 
                     }
 
@@ -63,17 +63,17 @@ namespace Oppgave_3
                     Console.WriteLine("ugyldig input-skriv inn et tall!");
 
 
-                    }
+                }
                 Console.WriteLine($" tallet var {secretNumber}, bedre lykke neste gang!");
 
-                 }
+            }
 
         }
-            
-            
+
+
     }
 
 }
-         
+
 
 
